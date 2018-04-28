@@ -17,4 +17,12 @@ export class BlogPostComponent implements OnInit {
   ngOnInit() {
   }
 
+  onLike(){
+    this.loveIts += 1;
+  }
+
+  onDontLike(){
+    this.loveIts -= 1;
+  }
+
 }

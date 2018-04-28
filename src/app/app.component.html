@@ -1,14 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-lg-12">
       <h1>Mes Blog Post</h1>
+
       <ul class="list-group">
         <app-blog-post *ngFor="let post of blogPost"
                         [title]="post.titlePost"
                         [content] ="post.contentPost"
                         [loveIts]="post.loveItsPost"
                         [created_at]="post.created_atPost" ></app-blog-post>
-      </ul>
+      </ul> <br>
+      <button type="button" class="btn btn-success" (click)="onCreatePost()" >Créer un nouveau post</button>
+
     </div>
   </div>
 </div>

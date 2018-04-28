@@ -2,7 +2,14 @@
                 'list-group-item-success': loveIts >= 0,
                 'list-group-item-danger': loveIts < 0}">
 
-  <h2> {{title}} </h2>
-  <p> {{content}} {{loveIts}} {{created_at}} </p>
+  <div >
+    <h2 class="float-left"> {{title}} </h2>  <div class="float-right"> {{created_at | date: 'dd/MM/yyyy, hh:mm'}} </div> <br> <br>
+  </div>
 
+  <p> {{content}} </p>
+  <p> {{loveIts}} </p>  
+  
+  <button type="button" class="btn btn-success" (click)="onLike()" >J'aime </button>
+  <button type="button" class="btn btn-success" (click)="onDontLike()" >Je n'aime pas</button>
+  
 </li>
